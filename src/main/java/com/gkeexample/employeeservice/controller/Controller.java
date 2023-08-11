@@ -1,10 +1,12 @@
 package com.gkeexample.employeeservice.controller;
 
 import com.gkeexample.employeeservice.model.Employee;
+import com.gkeexample.employeeservice.model.SalariedEmployee;
 import com.gkeexample.employeeservice.service.EmployeeService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.websocket.server.PathParam;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,5 +22,10 @@ public class Controller {
     @GetMapping("/get-employee-list")
     public List<Employee> getEmployeeList() {
         return employeeService.getEmployeeList();
+    }
+
+    @GetMapping("/get-employee/{id}")
+    public SalariedEmployee getEmployee(@PathParam("id") String id) {
+        return employeeService.getEmployee();
     }
 }
