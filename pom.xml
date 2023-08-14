@@ -23,7 +23,7 @@
 
 		<gcp-project-name>example-project-gke</gcp-project-name>
 		<image-name>employee-service</image-name>
-		<image-version>v1.2</image-version>
+		<image-version>v1.3</image-version>
 
 	</properties>
 	<dependencies>
